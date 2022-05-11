@@ -1,0 +1,10 @@
+[user]
+	name = Fredrik Mile
+	email = fredrik.mile@gmail.com
+[color "status"]
+	untracked = magenta
+	tracked = gray
+[commit]
+	template = /Users/fredrikmile/.gitmessage
+[core]
+	editor = nvim
