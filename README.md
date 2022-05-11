@@ -2,7 +2,7 @@
 
 ---
 
-Collection of my files needed for my development setup
+Collection of files needed for my development setup
 
 
 ## Used applications
