@@ -1,0 +1,11 @@
+# Type options: Refactor, Feature, Bug, Docs, Tests, Misc
+# No more than 50 chars. #### 50 chars is here:  #
+Type:
+
+# Wrap at 72 chars. ################################## which is here:  #
+What: XXX:
+
+Why:
+
+# Co-authored-by: name <user@users.noreply.github.com>
+
