@@ -4,7 +4,6 @@ ZSH_THEME="af-magic"
 lugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-
 # Path to visual studio code
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 
