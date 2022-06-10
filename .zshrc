@@ -1,7 +1,7 @@
 # Mandatory stuff
 export ZSH="/Users/fredrikmile/.oh-my-zsh"
-ZSH_THEME="af-magic"
-lugins=(git)
+ZSH_THEME="gallifrey"
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Path to visual studio code
@@ -24,9 +24,10 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 
-
 ## Aliases
 alias nv="nvim"
+
+alias k="kubectl"
 # Alias for open rider with specified dir
 alias rider="open -na "Rider.app" --args"
 [ -f "/Users/fredrikmile/.ghcup/env" ] && source "/Users/fredrikmile/.ghcup/env" # ghcup-env
