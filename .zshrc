@@ -23,8 +23,10 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 
 # Add usage of Kube.ps1 (This shows current ctx and namespace)
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-PS1='$(kube_ps1)'$PS1
 PS1='$(kube_ps1)%2~ $(git_prompt_info)%{%}%B»%b '
+
+# Use fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Alias
 alias nv="nvim"
@@ -33,4 +35,6 @@ alias k="kubectl"
 alias rider="open -na "Rider.app" --args"
 [ -f "/Users/fredrikmile/.ghcup/env" ] && source "/Users/fredrikmile/.ghcup/env" # ghcup-env
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+
 
