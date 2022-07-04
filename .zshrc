@@ -30,7 +30,10 @@ PS1='$(kube_ps1)%2~ $(git_prompt_info)%{%}%B»%b '
 
 # Alias
 alias nv="nvim"
+alias md="nv -c MarkdownPreview"
 alias k="kubectl"
+
+
 # Alias for open rider with specified dir
 alias rider="open -na "Rider.app" --args"
 [ -f "/Users/fredrikmile/.ghcup/env" ] && source "/Users/fredrikmile/.ghcup/env" # ghcup-env
