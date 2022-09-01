@@ -13,6 +13,9 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 # .NET Core SDK tools
 export PATH="$PATH:/Users/fredrikmile/.dotnet/tools"
 
+# Souper
+export PATH="$PATH:~/.local/bin/"
+
 # Neovim
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -32,7 +35,7 @@ PS1='$(kube_ps1)%2~ $(git_prompt_info)%{%}%B»%b '
 alias nv="nvim"
 alias md="nv -c MarkdownPreview"
 alias k="kubectl"
-
+alias dc="docker-compose"
 
 # Alias for open rider with specified dir
 alias rider="open -na "Rider.app" --args"
