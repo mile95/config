@@ -1,4 +1,5 @@
 {
 	"init.lua": "~/.config/nvim/init.lua",
-	".zshrc": "~/.zshrc"
+	".zshrc": "~/.zshrc",
+	".gitconfig": "~/.gitconfig"
 }
