@@ -31,7 +31,7 @@ PS1='$(kube_ps1)%2~ $(git_prompt_info)%{%}%B»%b '
 # Use fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Alias
+# Aliases
 alias nv="nvim"
 alias md="nv -c MarkdownPreview"
 alias k="kubectl"
