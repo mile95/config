@@ -23,10 +23,10 @@ stderror = proc_diff.stderr
 returncode = proc_diff.returncode
 
 if returncode != 0:
-    print("Diff")
+    print("found diff")
     proc_add = subprocess.run(["git", "add", "--all"])
     proc_commit = subprocess.run(["git", "commit", "-m", "Auto update"])
     proc_push = subprocess.run(["git", "push"])
+    print("pushed changes")
 else:
-    print("No diff")
-
+    print("found no diff")
