@@ -1,6 +1,9 @@
 import json
 import shutil
 import os
+import subprocess
+
+
 cwd = os.getcwd()
 
  
@@ -12,4 +15,18 @@ for name, path in entries.items():
     if "~" in path:
         path = os.path.expanduser(path)
     shutil.copy2(path, f"{cwd}/{name}")
+
+
+proc_diff = subprocess.run(["git", "diff", "--exit-code"], capture_output=True)
+stdout = proc_diff.stdout
+stderror = proc_diff.stderr
+returncode = proc_diff.returncode
+
+if returncode != 0:
+    print("Diff")
+    proc_add = subprocess.run(["git", "add", "--all"])
+    proc_commit = subprocess.run(["git", "commit", "-m", "Auto update"])
+    proc_push = subprocess.run(["git", "push"])
+else:
+    print("No diff")
 
