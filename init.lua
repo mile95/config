@@ -32,7 +32,13 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
+
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use {                                              -- filesystem navigation
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons'        -- filesystem icons
+  }
+  use "kyazdani42/nvim-web-devicons"
 end)
 
 --Set highlight on search
@@ -125,6 +131,8 @@ require('telescope').setup {
     },
   },
 }
+
+require('nvim-tree').setup{}
 
 -- Enable telescope fzf native
 require('telescope').load_extension 'fzf'
@@ -270,6 +278,23 @@ lspconfig.sumneko_lua.setup {
     },
   },
 }
+
+local set = vim.opt -- set options
+set.tabstop = 4
+set.softtabstop = 4
+set.shiftwidth = 4
+
+-- Yank to clipboard
+vim.o.clipboard = "unnamedplus"
+
+--[[ keys.lua ]]
+local map = vim.api.nvim_set_keymap
+
+-- remap the key used to leave insert mode
+map('i', 'jk', '', {})
+
+-- Toggle nvim-tree
+map('n', 'n', [[:NvimTreeToggle]], {})
 
 -- luasnip setup
 local luasnip = require 'luasnip'

@@ -16,6 +16,9 @@ export PATH="$PATH:/Users/fredrikmile/.dotnet/tools"
 # Souper
 export PATH="$PATH:~/.local/bin/"
 
+# Python3
+export PATH="$PATH:/~.local/bin/python3"
+
 # Neovim
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
